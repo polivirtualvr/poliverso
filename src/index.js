@@ -1,9 +1,18 @@
 const express = require('express');
 const path = require('path');
+const mongoose = require('mongoose');
 const indexRouter = require('./routes/index');
+
+// Load environment variables
+require('dotenv').config();  
 
 const app = express();
 const port = process.env.PORT || 3000;
+
+// Connect to MongoDB
+mongoose.connect(process.env.DB_URI)
+.then(() => console.log('Connected to MongoDB'))
+.catch((err) => console.error('Error connecting to MongoDB:', err));
 
 // View engine setup
 app.set('views', path.join(__dirname, 'views'));
