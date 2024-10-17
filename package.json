@@ -4,7 +4,7 @@
   "description": "Aplicación web interactiva que permite a los usuarios sumergirse en diversos mundos virtuales al estilo del metaverso.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node src/index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/polivirtualvr/poliverso#readme",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "express": "^4.21.1",
     "mongoose": "^8.7.1"
